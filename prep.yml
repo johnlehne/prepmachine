@@ -1,0 +1,42 @@
+- name: Bootstrap MacOS
+  hosts: 127.0.0.1
+  gather_facts: False
+
+  tasks:
+  - name: Install Brew Packages
+    homebrew:
+      name: '{{ brew_packages }}'
+      state: present
+    vars:
+      brew_packages:
+      - cask
+      - wget
+      - watch
+      - tree
+      - ack
+      - findutils
+      - git
+
+  tasks:
+  - name: Install Brew Cask Packages
+    homebrew_cask:
+      name: '{{ cask_packages }}'
+      state: present
+      accept_external_apps: true
+      update_homebrew: true
+    vars:
+      cask_packages:
+      - ivpn
+      - iina
+      - spotify
+      - google-chrome
+      - docker
+      - iterm2
+      - alfred
+      - zoomus
+      - docker
+      - google-backup-and-sync
+      - visual-studio-code
+      - teamviewer
+      - slack
+      - dozer

@@ -16,6 +16,8 @@
       - ack
       - findutils
       - git
+      - bat
+      - git-delta
 
   tasks:
   - name: Install Brew Cask Packages

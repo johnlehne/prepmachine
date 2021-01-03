@@ -9,15 +9,21 @@
       state: present
     vars:
       brew_packages:
-      - cask
-      - wget
-      - watch
-      - tree
       - ack
-      - findutils
-      - git
+      - bash-git-prompt
       - bat
+      - cask
+      - coreutils
+      - dos2unix
+      - findutils
       - git-delta
+      - jq
+      - pyenv
+      - pyenv-virtualenv
+      - shellcheck
+      - tree
+      - watch
+      - wget
 
   tasks:
   - name: Install Brew Cask Packages
@@ -28,17 +34,14 @@
       update_homebrew: true
     vars:
       cask_packages:
-      - ivpn
-      - iina
-      - spotify
-      - google-chrome
-      - docker
-      - iterm2
       - alfred
-      - zoomus
       - docker
       - google-backup-and-sync
-      - visual-studio-code
-      - teamviewer
+      - google-chrome
+      - iina
+      - iterm2
+      - ivpn
       - slack
-      - dozer
+      - spotify
+      - visual-studio-code
+      - zoomus

@@ -18,6 +18,7 @@
       - findutils
       - git-delta
       - jq
+      - mas
       - pyenv
       - pyenv-virtualenv
       - shellcheck
@@ -34,14 +35,23 @@
       update_homebrew: true
     vars:
       cask_packages:
-      - alfred
       - docker
-      - google-backup-and-sync
+      - google-drive
       - google-chrome
-      - iina
+      - iriunwebcam
       - iterm2
       - ivpn
+      # - lightshot (when available)
+      - notion
+      - raycast
       - slack
       - spotify
+      # - toothfairy ( when available )
       - visual-studio-code
+      - whatsapp
       - zoomus
+
+  tasks:
+    - name: Install App Store apps
+      mas_installed_apps:
+        - { id: 441258766, name: "Magnet" }

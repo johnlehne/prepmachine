@@ -38,6 +38,7 @@
       - docker
       - google-drive
       - google-chrome
+      - hiddenbar
       - iriunwebcam
       - iterm2
       - ivpn
